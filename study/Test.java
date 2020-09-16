@@ -21,7 +21,7 @@ public class Test {
         for (int i = 0; i < n; ++i) {
             result.add(arr.remove(i));
             permutation(arr, result, arr.size(), r - 1);
-            arr.add(result.get(result.size() - 1));
+            arr.add(i, result.get(result.size() - 1));
         }
     }
 
