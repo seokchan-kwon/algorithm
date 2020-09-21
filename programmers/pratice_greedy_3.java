@@ -25,6 +25,9 @@ class Solution {
             	back.add(name.length() - 1 - i);
             }
         }
+        if (name.length() % 2 == 1 && name.charAt(name.length() / 2) != 'A') {
+        	back.add(name.length() / 2);
+        }
         
         int frontSize = front.size();
         int backSize = back.size();
