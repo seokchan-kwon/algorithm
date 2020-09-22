@@ -47,7 +47,7 @@ class Kruskal {
             pq.add(new Data(graph[i][0], graph[i][1], graph[i][2]));
         }
 
-        for (int i = 1; i < n; ++i) {
+        for (int i = 0; i < n; ++i) {
             parent[i] = i;
         }
 
@@ -72,15 +72,14 @@ class Kruskal {
             return index;
         }
 
-        parent[index] = find(parent[index]);
-        return parent[index];
+        return parent[index] = find(parent[index]);
     }
 
     private void union(int first, int second) {
         int firstRoot = find(first);
         int secondRoot = find(second);
 
-        if (firstRoot == secondRoot) {
+        if (firstRoot != secondRoot) {
             parent[firstRoot] = second;
         }
     }
