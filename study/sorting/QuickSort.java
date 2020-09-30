@@ -1,4 +1,11 @@
 public class QuickSort {
+    /**
+     * 시간복잡도
+     * Best : nlogn
+     * Average : nlogn
+     * Worst : n^2
+     */
+
     private int[] numbers;
 
     public QuickSort(int[] numbers) {
