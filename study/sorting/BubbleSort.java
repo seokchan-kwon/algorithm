@@ -30,6 +30,7 @@ public class BubbleSort {
     }
 
     public int[] run() {
-        return this.bubbleSort(this.arr.length - 1);
+        this.bubbleSort(this.arr.length - 1);
+        return this.arr;
     }
 }
