@@ -36,8 +36,8 @@ public class HeapSort {
         }
     }
 
-    public int[] getAccendingArray() {
-        int[] lastArr = this.getDescendingArray();
+    public int[] getDescendingArray() {
+        int[] lastArr = this.getAccendingArray();
         int[] newArr = new int[lastArr.length];
         for (int i = 0; i < lastArr.length; ++i) {
             newArr[i] = lastArr[lastArr.length - 1 - i];
@@ -45,7 +45,7 @@ public class HeapSort {
         return newArr;
     }
 
-    public int[] getDescendingArray() {
+    public int[] getAccendingArray() {
         int length = this.arr.length;
         for (int i = length / 2 - 1; i >= 0; --i) {
             heapify(i, length);
